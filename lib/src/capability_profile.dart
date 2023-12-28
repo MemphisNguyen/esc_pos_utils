@@ -6,9 +6,8 @@
  * See LICENSE for distribution and usage details.
  */
 
-import 'dart:convert' show json;
-import 'dart:convert' show utf8;
 import 'package:flutter/services.dart' show rootBundle;
+import 'dart:convert' show json;
 
 class CodePage {
   CodePage(this.id, this.name);
@@ -44,9 +43,9 @@ class CapabilityProfile {
   List<CodePage> codePages;
 
   int getCodePageId(String? codePage) {
-    if (codePages == null) {
-      throw Exception("The CapabilityProfile isn't initialized");
-    }
+    // if (codePages == null) {
+    //   throw Exception("The CapabilityProfile isn't initialized");
+    // }
 
     return codePages
         .firstWhere((cp) => cp.name == codePage,
